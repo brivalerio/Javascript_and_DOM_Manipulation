@@ -15,3 +15,15 @@ data.forEach((ufoData) => {
   });
 
 var button = d3.select("#filter-btn");
+
+
+button.on("click", function() {
+    var tbody = d3.select("tbody");
+    tbody.html("");
+
+    var inputElement = d3.select("#datetime");
+    // console.log(data);
+
+    var inputValue = inputElement.property("value");
+    console.log(inputValue);
+});
