@@ -25,5 +25,16 @@ button.on("click", function() {
     // console.log(data);
 
     var inputValue = inputElement.property("value");
-    console.log(inputValue);
+    // console.log(inputValue);
+
+    var filteredData = data.filter(myData => myData.datetime === inputValue);
+    // console.log(filteredData);
+
+    filteredData.forEach((alien) => {
+        var row = tbody.append("tr");
+        Object.entries(alien).forEach(([key, value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
 });
