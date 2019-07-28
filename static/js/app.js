@@ -22,7 +22,7 @@ button.on("click", function() {
     tbody.html("");
 
     var inputElement = d3.select("#datetime");
-    // console.log(data);
+    // console.log(inputElement);
 
     var inputValue = inputElement.property("value");
     // console.log(inputValue);
